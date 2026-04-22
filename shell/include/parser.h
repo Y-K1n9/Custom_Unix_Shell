@@ -11,11 +11,13 @@ typedef struct operators {
     int append_output; // Flag for '>>'
     // Support multiple redirections: store every occurrence to enforce
     // "only the last one takes effect" while validating/creating earlier ones.
+    //LLM Generated Code Begins
     char** input_files;      // list of all input redirection filenames in order
     int in_count;
     char** output_files;     // list of all output redirection filenames in order
     int* output_append;      // parallel array: 0 for '>', 1 for '>>'
     int out_count;
+    //LLM Generated Code Ends
 } operators;
 
 // Represents the entire command line, which is a sequence of simple commands
